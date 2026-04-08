@@ -286,12 +286,15 @@ a {
     position: absolute;
     top: 35px;
     left: 0;
-    width: 250px;
+    width: 400px;
     background: white;
     color: black;
     border-radius: 10px;
     padding: 10px;
     display: none;
+     max-height: 400px;
+      overflow-y: auto;
+      z-index: 1000;
 }
 .dropdown-box.show {
     display: block;
@@ -351,7 +354,7 @@ a {
 .city-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 5px;
+    
 }
 
 .city-card {
@@ -385,6 +388,13 @@ a {
 .other-cities {
     max-height: 150px;
     overflow-y: auto;
+      flex: 1 1 calc(50% - 10px); /* 2 items per row */
+    text-align: center;
+     padding: 8px 0;
+    border-radius: 6px;
+    background: #f5f5f5;
+    text-decoration: none;
+    color: black;
 }
 
 
@@ -408,10 +418,11 @@ a {
 /* home page */
 /* HERO SECTION */
 .hero {
+    
     height: 100vh;
-    background: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa') no-repeat center/cover;
-    position: relative;
-    color: white;
+    background: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&h=1080&fit=crop') no-repeat center/cover;
+    background-attachment: scroll; /* faster than fixed */
+
 }
 
 .overlay {
