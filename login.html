@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trueliv.Properties</title>
+    <link rel="stylesheet" href="statics/style/style.css">
+</head>
+
+<body>
+
+<!-- MAIN PAGE -->
+<div class="hero">
+    <button class="top-btn" onclick="openModal()">Login</button>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+
+    <!-- LOGIN -->
+    <div class="box" id="loginBox">
+        <span class="close" onclick="closeModal()">✖</span>
+
+        <h2>Login to Continue</h2>
+
+        <div class="phone-box">
+            <div class="country">+91</div>
+            <input type="text" id="loginPhone" placeholder="Enter Mobile Number">
+        </div>
+
+        <button class="btn" onclick="login()">Proceed to Login →</button>
+
+        <p>Don’t have an account? 
+            <a onclick="showRegister()">Create Account</a>
+        </p>
+    </div>
+
+    <!-- REGISTER -->
+    <div class="box hidden" id="registerBox">
+        <span class="close" onclick="closeModal()">✖</span>
+
+        <h2>Create Account</h2>
+
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="text" id="phone" placeholder="Mobile Number">
+        <input type="password" id="password" placeholder="Password">
+
+        <button class="btn" onclick="register()">Register</button>
+
+        <p>Already have account? 
+            <a onclick="showLogin()">Login</a>
+        </p>
+    </div>
+
+</div>
+
+<script src="statics/scripts/javascript.js"></script>
+
+</body>
+</html>
