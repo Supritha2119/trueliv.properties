@@ -422,7 +422,10 @@ a {
     height: 100vh;
     background: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&h=1080&fit=crop') no-repeat center/cover;
     background-attachment: scroll; /* faster than fixed */
-
+    color: white;
+     position: relative;
+     display: flex;
+     align-items: center;
 }
 
 .overlay {
