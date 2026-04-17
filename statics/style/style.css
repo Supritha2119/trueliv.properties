@@ -512,6 +512,7 @@ a {
     padding: 10px 20px;
     font-weight: bold;
     cursor: pointer;
+    border-radius:15px;
 }
 
 /* FILTERS */
@@ -526,3 +527,5 @@ a {
     border-radius: 6px;
     border: none;
 }
+
+
