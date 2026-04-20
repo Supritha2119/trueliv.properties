@@ -241,12 +241,100 @@ searchInput.addEventListener("keyup", function () {
         noResult.style.display = found ? "none" : "block";
     }
 });
-const tabButtons = document.querySelectorAll(".tabs button");
 
-tabButtons.forEach(btn => {
-    btn.addEventListener("click", () => {
-        document.querySelector(".tabs .active").classList.remove("active");
+// ================= TAB SWITCH =================
+const tabBtns = document.querySelectorAll(".tab-btn");
+const tabContents = document.querySelectorAll(".tab-content");
+const filters = document.getElementById("filters");
+
+tabBtns.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+
+        e.stopPropagation();
+
+        // remove all active
+        tabBtns.forEach(b => b.classList.remove("active"));
+        tabContents.forEach(t => t.classList.remove("active"));
+
+        // activate clicked tab
         btn.classList.add("active");
+        document.getElementById(btn.dataset.tab).classList.add("active");
+
+        // 🔥 SAME behavior for ALL tabs (Buy + Projects + others)
+        filters.style.display = "none";
     });
 });
 
+// default
+filters.style.display = "none";
+// ================= OUTSIDE CLICK =================
+document.addEventListener("click", function (e) {
+
+    const searchPanel = document.querySelector(".search-panel");
+
+    if (!searchPanel.contains(e.target)) {
+
+        // close everything
+        tabBtns.forEach(b => b.classList.remove("active"));
+        tabContents.forEach(t => t.classList.remove("active"));
+
+        // show filters again
+        filters.style.display = "flex";
+    }
+});
+
+
+// ================= PREVENT CLOSE WHEN INSIDE =================
+document.querySelector(".search-panel").addEventListener("click", function (e) {
+    e.stopPropagation();
+});
+// ================= SLIDER =================
+document.querySelectorAll(".slider-container").forEach(container => {
+
+    const slider = container.querySelector(".slider");
+    const leftBtn = container.querySelector(".left");
+    const rightBtn = container.querySelector(".right");
+
+    rightBtn.addEventListener("click", () => {
+        slider.scrollBy({
+            left: 250,
+            behavior: "smooth"
+        });
+    });
+
+    leftBtn.addEventListener("click", () => {
+        slider.scrollBy({
+            left: -250,
+            behavior: "smooth"
+        });
+    });
+
+});
+function scrollLocalities(button, direction) {
+    const container = button.parentElement.querySelector(".localities-slider");
+
+    container.scrollBy({
+        left: direction * 200,
+        behavior: "smooth"
+    });
+}
+window.addEventListener("DOMContentLoaded", () => {
+    // hide everything first
+    document.querySelectorAll(".tab-content").forEach(tab => {
+        tab.classList.remove("active");
+    });
+
+    // set default tab AFTER load
+    document.getElementById("buy").classList.add("active");
+
+    // optional: set active button too
+    document.querySelectorAll(".tab-btn").forEach(btn => {
+        btn.classList.remove("active");
+    });
+
+    document.querySelector("[data-tab='buy']").classList.add("active");
+});
+
+window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+});
