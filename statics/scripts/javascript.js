@@ -265,25 +265,23 @@ tabBtns.forEach(btn => {
     });
 });
 
-// default
-filters.style.display = "none";
 // ================= OUTSIDE CLICK =================
 document.addEventListener("click", function (e) {
 
     const searchPanel = document.querySelector(".search-panel");
 
+    // if click is OUTSIDE search panel
     if (!searchPanel.contains(e.target)) {
 
-        // close everything
-        tabBtns.forEach(b => b.classList.remove("active"));
-        tabContents.forEach(t => t.classList.remove("active"));
+        // remove active tabs
+        document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+        document.querySelectorAll(".tab-content").forEach(t => t.classList.remove("active"));
 
         // show filters again
-        filters.style.display = "flex";
+        const filters = document.getElementById("filters");
+        if (filters) filters.style.display = "flex";
     }
 });
-
-
 // ================= PREVENT CLOSE WHEN INSIDE =================
 document.querySelector(".search-panel").addEventListener("click", function (e) {
     e.stopPropagation();
@@ -318,23 +316,41 @@ function scrollLocalities(button, direction) {
         behavior: "smooth"
     });
 }
-window.addEventListener("DOMContentLoaded", () => {
-    // hide everything first
-    document.querySelectorAll(".tab-content").forEach(tab => {
-        tab.classList.remove("active");
-    });
-
-    // set default tab AFTER load
-    document.getElementById("buy").classList.add("active");
-
-    // optional: set active button too
-    document.querySelectorAll(".tab-btn").forEach(btn => {
-        btn.classList.remove("active");
-    });
-
-    document.querySelector("[data-tab='buy']").classList.add("active");
-});
 
 window.addEventListener("load", () => {
     document.body.classList.add("loaded");
 });
+
+
+
+function addChip(name) {
+    const container = document.getElementById("selectedChips");
+
+    // prevent duplicate
+    if ([...container.children].some(chip => chip.innerText.includes(name))) {
+        return;
+    }
+
+    const chip = document.createElement("div");
+    chip.className = "chip";
+    chip.innerHTML = name + " ✖";
+
+    // remove chip on click
+    chip.onclick = () => chip.remove();
+
+    container.appendChild(chip);
+}
+function slideLeft() {
+    document.getElementById("slider").scrollBy({
+        left: -350,
+        behavior: "smooth"
+    });
+}
+
+function slideRight() {
+    document.getElementById("slider").scrollBy({
+        left: 350,
+        behavior: "smooth"
+    });
+}
+let index = 0;

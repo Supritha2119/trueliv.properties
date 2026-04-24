@@ -127,7 +127,7 @@
             <input type="text" id="name" placeholder="Full Name">
             <input type="text" id="phone" placeholder="Mobile Number">
             <input type="password" id="password" placeholder="Password">
-            <button class="btn" onclick="register()">Register</button>
+            <button class="btn-log" onclick="register()">Register</button>
             <p>Already have account? 
                 <a onclick="showLogin()">Login</a>
             </p>
@@ -145,7 +145,7 @@
             <div class="search-panel">
                 <!-- Tabs -->
                  <div class="tabs">
-                    <button class="tab-btn active" data-tab="buy">Buy</button>
+                    <button class="tab-btn" data-tab="buy">Buy</button>
                     <button class="tab-btn" data-tab="projects">Projects</button>
                     <button class="tab-btn" data-tab="pg">PG</button>
                     <button class="tab-btn" data-tab="plot">Plot</button>
@@ -338,9 +338,280 @@
 </div>
 </div>
 </section>
+<div>
+<h1>Welcome back!</h1>
+
+<div class="container">
+<div class="cards">
+
+<!-- Property Recommendations -->
+<div class="card">
+    <div>
+        <h3>🏠 Property Recommendations</h3>
+        <div class="property-img"></div>
+    </div>
+    <a href="#" class="btn-welcome">Show Recommendations →</a>
+</div>
+
+<!-- Compare Properties -->
+<div class="card">
+    <div>
+        <h3>📊 Compare Properties</h3>
+        <div class="compare-box">
+            <div class="compare-card"></div>
+            <div class="circle"></div>
+            <div class="compare-card"></div>
+        </div>
+        <p style="font-size:13px;color:#777;">Compare side by side</p>
+        <div class="tags">
+            <span>Price</span>
+            <span>Amenities</span>
+            <span>Location</span>
+        </div>
+    </div>
+    <a href="#" class="btn-welcome">Compare Properties →</a>
+</div>
+
+<!-- Continue Search -->
+<div class="card">
+    <div>
+        <h3>🔍 Continue Your Last Search</h3>
+
+        <div class="search-box">
+            Property for Rent in HSR Layout Bangalore
+        </div>
+
+        <!-- Selected Chips -->
+        <div class="chipss" id="selectedChips"></div>
+
+        <p style="margin:10px 0;font-size:13px;color:#666;">
+            Add Nearby Localities
+        </p>
+
+        <!-- Available Options -->
+        <div class="chipss">
+            <div class="chip">Hosapalya 
+                <button class="add-btn" onclick="addChip('Hosapalya')">+</button>
+            </div>
+
+            <div class="chip">Haralur Road 
+                <button class="add-btn" onclick="addChip('Haralur Road')">+</button>
+            </div>
+
+            <div class="chip">Kudlu Gate 
+                <button class="add-btn" onclick="addChip('Kudlu Gate')">+</button>
+            </div>
+
+            <div class="chip">Harlur 
+                <button class="add-btn" onclick="addChip('Harlur')">+</button>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="btn-welcome">Continue Search →</a>
+</div>
+
+<!-- Trending -->
+<div class="card">
+    <div>
+        <h3>📈 Trending Right Now</h3>
+
+        <div class="trend">
+            <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae">
+            <div>
+                <div>Embassy Verde</div>
+                <div class="price">₹ 54.95 L</div>
+            </div>
+        </div>
+
+        <div class="trend">
+            <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb">
+            <div>
+                <div>Xora Irise</div>
+                <div class="price">₹ 68.06 L</div>
+            </div>
+        </div>
+
+        <div class="trend">
+            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858">
+            <div>
+                <div>Bhartiya City</div>
+                <div class="price">₹ 70.83 L</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="section">
+    <h2>Bangalore Projects in Spotlight</h2>
+    <p>Explore top projects in Bangalore</p>
+
+    <div class="slider-container">
+
+        <!-- LEFT BUTTON -->
+        <button class="scroll-btn left" onclick="slideLeft()">❮</button>
+
+        <!-- SLIDER -->
+        <div class="slider" id="slider">
+
+            <!-- CARD 1 -->
+            <div class="card-slide">
+                <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2">
+                <div class="content">
+                    <div class="logos">LOGO</div>
+
+                    <div class="details">
+                        <div class="title">Govianu Nakshathra</div>
+                        <div class="location">Kamakshipalya, Bangalore</div>
+                        <div class="by">by Govianu</div>
+                    </div>
+
+                    <div class="right">
+                        <div class="bhk">3 BHK</div>
+                        <div class="price">₹ 1.50 Cr to 1.52 Cr</div>
+                        <button class="btn-call">📞 Enquire Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="card-slide">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+                <div class="content">
+                    <div class="logos">LOGO</div>
+
+                    <div class="details">
+                        <div class="title">GM Govianu</div>
+                        <div class="location">Seshadripuram, Bangalore</div>
+                        <div class="by">by Govianu</div>
+                    </div>
+
+                    <div class="right">
+                        <div class="bhk">3, 4 BHK</div>
+                        <div class="price">₹ 3.50 Cr to 4.50 Cr</div>
+                        <button class="btn-call">📞 Enquire Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="card-slide">
+                <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae">
+                <div class="content">
+                    <div class="logos">LOGO</div>
+
+                    <div class="details">
+                        <div class="title">Luxury Heights</div>
+                        <div class="location">Whitefield, Bangalore</div>
+                        <div class="by">by Builder</div>
+                    </div>
+
+                    <div class="right">
+                        <div class="bhk">2, 3 BHK</div>
+                        <div class="price">₹ 2.20 Cr</div>
+                        <button class="btn-call">📞 Enquire Now</button>
+                    </div>
+                </div>
+            </div>
+             <!-- CARD 1 -->
+            <div class="card-slide">
+                <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2">
+                <div class="content">
+                    <div class="logos">LOGO</div>
+
+                    <div class="details">
+                        <div class="title">Govianu Nakshathra</div>
+                        <div class="location">Kamakshipalya, Bangalore</div>
+                        <div class="by">by Govianu</div>
+                    </div>
+
+                    <div class="right">
+                        <div class="bhk">3 BHK</div>
+                        <div class="price">₹ 1.50 Cr to 1.52 Cr</div>
+                        <button class="btn-call">📞 Enquire Now</button>
+                    </div>
+                </div>
+            </div>
 
 
+        </div>
 
+        <!-- RIGHT BUTTON -->
+        <button class="scroll-btn right-btn" onclick="slideRight()">❯</button>
+
+    </div>
+</div>
+<!-- ===== HOT DEALS SLIDER ===== -->
+<div class="hot-section">
+    <h2>🔥 Hot Selling Projects</h2>
+
+    <div class="hot-wrapper">
+
+        <!-- LEFT BUTTON -->
+        <button class="hot-btn hot-left" onclick="moveHot(-1)">❮</button>
+
+        <!-- SLIDER -->
+        <div class="hot-track" id="hotTrack">
+
+            <a href="project1.html" class="hot-link">
+                <div class="hot-card">
+                    <img src="https://source.unsplash.com/400x300/?apartment">
+                    <h3>Purva Silver Sky</h3>
+                    <p>Electronic City</p>
+                    <span>₹ 2.29 Cr</span>
+                </div>
+            </a>
+
+            <a href="project2.html" class="hot-link">
+                <div class="hot-card">
+                    <img src="https://source.unsplash.com/400x300/?villa">
+                    <h3>Shriram South East</h3>
+                    <p>Attibele</p>
+                    <span>₹ 55 Lac</span>
+                </div>
+            </a>
+
+            <a href="project3.html" class="hot-link">
+                <div class="hot-card">
+                    <img src="https://source.unsplash.com/400x300/?modern-home">
+                    <h3>Songs Of The Earth</h3>
+                    <p>Madiwala</p>
+                    <span>₹ 1.02 Cr</span>
+                </div>
+            </a>
+
+            <a href="project4.html" class="hot-link">
+                <div class="hot-card">
+                    <img src="https://source.unsplash.com/400x300/?luxury-house">
+                    <h3>Purva Park Hill</h3>
+                    <p>Kanakapura Road</p>
+                    <span>₹ 1.56 Cr</span>
+                </div>
+            </a>
+
+            <a href="project5.html" class="hot-link">
+                <div class="hot-card">
+                    <img src="https://source.unsplash.com/400x300/?city-building">
+                    <h3>Prestige Southern Star</h3>
+                    <p>Akshayanagar</p>
+                    <span>₹ 83 Lac</span>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- RIGHT BUTTON -->
+        <button class="hot-btn hot-right" onclick="moveHot(1)">❯</button>
+
+    </div>
+    <p class="view-projects" onclick="window.location.href='projects.html'">
+    Projects in Bangalore →
+</p>
+</div>
 
 <script src="statics/scripts/javascript.js"></script>
 
