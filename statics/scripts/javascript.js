@@ -340,17 +340,11 @@ function addChip(name) {
 
     container.appendChild(chip);
 }
-function slideLeft() {
-    document.getElementById("slider").scrollBy({
-        left: -350,
-        behavior: "smooth"
-    });
-}
+function moveHot(direction) {
+    const track = document.getElementById("hotTrack");
 
-function slideRight() {
-    document.getElementById("slider").scrollBy({
-        left: 350,
+    track.scrollBy({
+        left: direction * 350,
         behavior: "smooth"
     });
 }
-let index = 0;
