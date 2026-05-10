@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trueliv.Properties</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="statics/style/style.css">
 </head>
 
@@ -330,15 +332,270 @@
                         </div>
                     </div>
                 </div>
-            </div>
-<div class="tab-content" id="pg">PG content</div>
-<div class="tab-content" id="plot">Plot content</div>
-<div class="tab-content" id="commercial">Commercial content</div>
+            
+<div class="tab-content" id="pg">
+    <div class="search-row">
+                        <select><option>Bangalore</option></select>
+                        <input placeholder="Search by Area, Landmark">
+                        <button class="search-btn">Search</button>
+                    </div>
+                    <div class="buy-expanded">
+                        <div class="quick-options">
+                            <span>🚇 Near Metro</span>
+                            <span>⏱ Travel Time</span>
+                            <span>📍 Near Me</span>
+                        </div>
+                        <hr>
+                        <div class="buy-content">
+                            <!-- LEFT -->
+                             <div class="buy-left">
+                                <h4>Trending Searches</h4>
+                                <div class="chips">
+                                    <span>Yelahanka</span>
+                                    <span>JP Nagar</span>
+                                    <span>Koramangala</span>
+                                    <span>Whitefield</span>
+                                </div>
+                                <h4>Popular Localities</h4>
+                                <div class="slider-container">
+                                    <button class="slide-btn left" onclick="scrollLocalities(this,-1)">&#10094;</button>
+                                    <div class="localities-slider" >
+                                        <div class="loc">Whitefield<br><small>₹14,750/Sq.ft.</small></div>
+                                        <div class="loc">Sarjapur<br><small>₹10,500/Sq.ft.</small></div>
+                                        <div class="loc">Devanahalli<br><small>₹9,500/Sq.ft.</small></div>
+                                        <div class="loc">HSR Layout<br><small>₹12,000/Sq.ft.</small></div>
+                                        <div class="loc">JP Nagar<br><small>₹11,200/Sq.ft.</small></div>
+                                        <div class="loc">Devanahalli<br><small>₹9,500/Sq.ft.</small></div>
+                                        <div class="loc">HSR Layout<br><small>₹12,000/Sq.ft.</small></div>
+                                        <div class="loc">Devanahalli<br><small>₹9,500/Sq.ft.</small></div>
+                                        <div class="loc">HSR Layout<br><small>₹12,000/Sq.ft.</small></div>
+                                    </div>
+                                    <button class="slide-btn right" onclick="scrollLocalities(this,1)">&#10095;</button>
+                                </div>
+                            </div>
+                            <!-- RIGHT -->
+                             <div class="buy-right">
+                                <h4>Top Developers</h4>
+                                <div class="slider-container">
+                                    <button class="slide-btn left" onclick="scrollDevelopers(this,-1)">&#10094;</button>
+                                    <div class="developers slider">
+                                        <span>Prestige<br><small>223 Projects</small></span>
+                                        <span>Sobha<br><small>168 Projects</small></span>
+                                        <span>Brigade<br><small>149 Projects</small></span>
+                                        <span>Sobha<br><small>168 Projects</small></span>
+                                        <span>Sobha<br><small>168 Projects</small></span>
+                                        <span>Sobha<br><small>168 Projects</small></span>
+                                        <span>Sobha<br><small>168 Projects</small></span>
+                                        <span>Sobha<br><small>168 Projects</small></span>
+                                        <span>Sobha<br><small>168 Projects</small></span>
+                                    </div>
+                                    <button class="slide-btn right">&#10095;</button>
+                                </div>
+                                <h4>Top Projects in Bangalore</h4>
+                                <div class="slider-container">
+                                    <button class="slide-btn left">&#10094;</button>
+                                    <div class="projects slider">
+                                        <div class="project">
+                                            <img src="images/images.jpg">
+                                            <p>TVS Emerald Altura</p>
+                                        </div>
+                                        <div class="project">
+                                            <img src="images/images.jpg">
+                                            <p>Puravankara Northern</p>
+                                        </div>
+                                        <div class="project">
+                                            <img src="images/images.jpg">
+                                            <p>Bhartiya City</p>
+                                        </div>
+                                        <div class="project">
+                                            <img src="images/images.jpg">
+                                            <p>Bhartiya City</p>
+                                        </div>
+                                    </div>
+                                    <button class="slide-btn right">&#10095;</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+<div class="tab-content" id="plot">
+    <div class="search-row">
+                        <select><option>Bangalore</option></select>
+                        <input placeholder="Search by Area, Landmark">
+                        <button class="search-btn">Search</button>
+                    </div>
+                    <div class="buy-expanded">
+                        <div class="quick-options">
+                            <span>🚇 Near Metro</span>
+                            <span>⏱ Travel Time</span>
+                            <span>📍 Near Me</span>
+                        </div>
+                        <hr>
+                        <div class="buy-content">
+                            <!-- LEFT -->
+                             <div class="buy-left">
+                                <h4>Trending Searches</h4>
+                                <div class="chips">
+                                    <span>Yelahanka</span>
+                                    <span>JP Nagar</span>
+                                    <span>Koramangala</span>
+                                    <span>Whitefield</span>
+                                </div>
+                                <h4>Popular Localities</h4>
+                                <div class="slider-container">
+                                    <button class="slide-btn left" onclick="scrollLocalities(this,-1)">&#10094;</button>
+                                    <div class="localities-slider" >
+                                        <div class="loc">Whitefield<br><small>₹14,750/Sq.ft.</small></div>
+                                        <div class="loc">Sarjapur<br><small>₹10,500/Sq.ft.</small></div>
+                                        <div class="loc">Devanahalli<br><small>₹9,500/Sq.ft.</small></div>
+                                        <div class="loc">HSR Layout<br><small>₹12,000/Sq.ft.</small></div>
+                                        <div class="loc">JP Nagar<br><small>₹11,200/Sq.ft.</small></div>
+                                        <div class="loc">Devanahalli<br><small>₹9,500/Sq.ft.</small></div>
+                                        <div class="loc">HSR Layout<br><small>₹12,000/Sq.ft.</small></div>
+                                        <div class="loc">Devanahalli<br><small>₹9,500/Sq.ft.</small></div>
+                                        <div class="loc">HSR Layout<br><small>₹12,000/Sq.ft.</small></div>
+                                    </div>
+                                    <button class="slide-btn right" onclick="scrollLocalities(this,1)">&#10095;</button>
+                                </div>
+                            </div>
+                            <!-- RIGHT -->
+                             <div class="buy-right">
+                                <h4>Top Developers</h4>
+                                <div class="slider-container">
+                                    <button class="slide-btn left" onclick="scrollDevelopers(this,-1)">&#10094;</button>
+                                    <div class="developers slider">
+                                        <span>Prestige<br><small>223 Projects</small></span>
+                                        <span>Sobha<br><small>168 Projects</small></span>
+                                        <span>Brigade<br><small>149 Projects</small></span>
+                                        <span>Sobha<br><small>168 Projects</small></span>
+                                        <span>Sobha<br><small>168 Projects</small></span>
+                                        <span>Sobha<br><small>168 Projects</small></span>
+                                        <span>Sobha<br><small>168 Projects</small></span>
+                                        <span>Sobha<br><small>168 Projects</small></span>
+                                        <span>Sobha<br><small>168 Projects</small></span>
+                                    </div>
+                                    <button class="slide-btn right">&#10095;</button>
+                                </div>
+                                <h4>Top Projects in Bangalore</h4>
+                                <div class="slider-container">
+                                    <button class="slide-btn left">&#10094;</button>
+                                    <div class="projects slider">
+                                        <div class="project">
+                                            <img src="images/images.jpg">
+                                            <p>TVS Emerald Altura</p>
+                                        </div>
+                                        <div class="project">
+                                            <img src="images/images.jpg">
+                                            <p>Puravankara Northern</p>
+                                        </div>
+                                        <div class="project">
+                                            <img src="images/images.jpg">
+                                            <p>Bhartiya City</p>
+                                        </div>
+                                        <div class="project">
+                                            <img src="images/images.jpg">
+                                            <p>Bhartiya City</p>
+                                        </div>
+                                    </div>
+                                    <button class="slide-btn right">&#10095;</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+<div class="tab-content" id="commercial">
+    <div class="search-row">
+                        <select><option>Bangalore</option></select>
+                        <input placeholder="Search by Area, Landmark">
+                        <button class="search-btn">Search</button>
+                    </div>
+                    <div class="buy-expanded">
+                        <div class="quick-options">
+                            <span>🚇 Near Metro</span>
+                            <span>⏱ Travel Time</span>
+                            <span>📍 Near Me</span>
+                        </div>
+                        <hr>
+                        <div class="buy-content">
+                            <!-- LEFT -->
+                             <div class="buy-left">
+                                <h4>Trending Searches</h4>
+                                <div class="chips">
+                                    <span>Yelahanka</span>
+                                    <span>JP Nagar</span>
+                                    <span>Koramangala</span>
+                                    <span>Whitefield</span>
+                                </div>
+                                <h4>Popular Localities</h4>
+                                <div class="slider-container">
+                                    <button class="slide-btn left" onclick="scrollLocalities(this,-1)">&#10094;</button>
+                                    <div class="localities-slider" >
+                                        <div class="loc">Whitefield<br><small>₹14,750/Sq.ft.</small></div>
+                                        <div class="loc">Sarjapur<br><small>₹10,500/Sq.ft.</small></div>
+                                        <div class="loc">Devanahalli<br><small>₹9,500/Sq.ft.</small></div>
+                                        <div class="loc">HSR Layout<br><small>₹12,000/Sq.ft.</small></div>
+                                        <div class="loc">JP Nagar<br><small>₹11,200/Sq.ft.</small></div>
+                                        <div class="loc">Devanahalli<br><small>₹9,500/Sq.ft.</small></div>
+                                        <div class="loc">HSR Layout<br><small>₹12,000/Sq.ft.</small></div>
+                                        <div class="loc">Devanahalli<br><small>₹9,500/Sq.ft.</small></div>
+                                        <div class="loc">HSR Layout<br><small>₹12,000/Sq.ft.</small></div>
+                                    </div>
+                                    <button class="slide-btn right" onclick="scrollLocalities(this,1)">&#10095;</button>
+                                </div>
+                            </div>
+                            <!-- RIGHT -->
+                             <div class="buy-right">
+                                <h4>Top Developers</h4>
+                                <div class="slider-container">
+                                    <button class="slide-btn left" onclick="scrollDevelopers(this,-1)">&#10094;</button>
+                                    <div class="developers slider">
+                                        <span>Prestige<br><small>223 Projects</small></span>
+                                        <span>Sobha<br><small>168 Projects</small></span>
+                                        <span>Brigade<br><small>149 Projects</small></span>
+                                        <span>Sobha<br><small>168 Projects</small></span>
+                                        <span>Sobha<br><small>168 Projects</small></span>
+                                        <span>Sobha<br><small>168 Projects</small></span>
+                                        <span>Sobha<br><small>168 Projects</small></span>
+                                        <span>Sobha<br><small>168 Projects</small></span>
+                                        <span>Sobha<br><small>168 Projects</small></span>
+                                    </div>
+                                    <button class="slide-btn right">&#10095;</button>
+                                </div>
+                                <h4>Top Projects in Bangalore</h4>
+                                <div class="slider-container">
+                                    <button class="slide-btn left">&#10094;</button>
+                                    <div class="projects slider">
+                                        <div class="project">
+                                            <img src="images/images.jpg">
+                                            <p>TVS Emerald Altura</p>
+                                        </div>
+                                        <div class="project">
+                                            <img src="images/images.jpg">
+                                            <p>Puravankara Northern</p>
+                                        </div>
+                                        <div class="project">
+                                            <img src="images/images.jpg">
+                                            <p>Bhartiya City</p>
+                                        </div>
+                                        <div class="project">
+                                            <img src="images/images.jpg">
+                                            <p>Bhartiya City</p>
+                                        </div>
+                                    </div>
+                                    <button class="slide-btn right">&#10095;</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
 
 </div>
 </div>
 </section>
-<div>
+<div class="main">
 <h1>Welcome back!</h1>
 
 <div class="container">
@@ -629,7 +886,157 @@
 </p>
 </div>
 
+<div class="every">
+<h2>Everything you Need at One Place</h2>
+
+<div class="tabs">
+    <div class="tab active">For Buyers / Owners</div>
+    <div class="tab">For Tenants</div>
+    <div class="tab">For Agents</div>
+    <div class="tab">For Builders & Banks</div>
+</div>
+
+<!-- dynamic grid -->
+<div class="grid" id="grid"></div>
+</div>
+
+<section class="re-section">
+
+<h2>Discover More Real Estate Options in Bangalore</h2>
+
+<div class="re-row">
+
+<!-- SIDEBAR -->
+<div class="re-sidebar">
+
+    <div class="re-accordion active">
+        <div class="re-header" data-type="projects">
+            New Projects <span class="re-arrow">›</span>
+        </div>
+        <div class="re-content" >
+            New beginnings start with modernistic homes, and these new projects in Bangalore are your ideal first step. They offer unbeatable advantages, great pricing, innovative layouts, and builder credibility. Whether in metro hubs or quiet suburbs, these new launches deliver value at every turn.
+            <br>
+            <button onclick="reGo('projects')">View All</button>
+        </div>
+    </div>
+
+    <div class="re-accordion">
+        <div class="re-header" data-type="sale">
+            Properties for Sale <span class="re-arrow">›</span>
+        </div>
+        <div class="re-content">
+            Buying a home should be an exciting experience, not an overwhelming one. That is why we bring you verified properties for sale in Bangalore. Ensured with photos, specifications, and detailed pricing information. Filter by your budget, location, and size to quickly narrow down your choices.
+            <br>
+            <button onclick="reGo('sale')">View All</button>
+        </div>
+    </div>
+
+    <div class="re-accordion">
+        <div class="re-header" data-type="rent">
+            Properties for Rent <span class="re-arrow">›</span>
+        </div>
+        <div class="re-content">
+            Renting a home has never been simpler. Whether you are a student, a working professional, or a family on the move, we have options for properties for rent in Bangalore to suit all. Fully furnished, semi-furnished, and unfurnished listings are available, featuring updated photos and rental terms.
+            <br>
+            <button onclick="reGo('rent')">View All</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- RIGHT -->
+<div class="re-main">
+    <div class="re-tabs" id="reTabs"></div>
+    <div id="reDisplay"></div>
+</div>
+
+</div>
+</section>
+<div class="tl-wrapper">
+
+<h2>Top Localities</h2>
+
+<!-- Tabs -->
+<div class="tl-tabs">
+    <div class="tl-tab active" onclick="tlShowTab(0)">Affordable</div>
+    <div class="tl-tab" onclick="tlShowTab(1)">Business</div>
+    <div class="tl-tab" onclick="tlShowTab(2)">Education</div>
+</div>
+
+<!-- TAB 1 -->
+<div class="tl-swiper active">
+    <div class="swiper-wrapper" id="tl-tab1"></div>
+    <div class="tl-next"></div>
+    <div class="tl-prev"></div>
+</div>
+
+<!-- TAB 2 -->
+<div class="tl-swiper">
+    <div class="swiper-wrapper" id="tl-tab2"></div>
+    <div class="tl-next"></div>
+    <div class="tl-prev"></div>
+</div>
+
+<!-- TAB 3 -->
+<div class="tl-swiper">
+    <div class="swiper-wrapper" id="tl-tab3"></div>
+    <div class="tl-next"></div>
+    <div class="tl-prev"></div>
+</div>
+
+<div class="tl-view-all">
+    <a href="all-localities.html">View All Localities →</a>
+</div>
+
+</div>
+
+<div class="app-container">
+
+    <!-- LEFT -->
+    <div class="left">
+        <h1>Real Estate in your pocket</h1>
+        <p>
+            With our app, spend less time searching and more time at your dream home.
+            <b>Download now!</b>
+        </p>
+
+        <div class="input-box">
+            <input type="text" id="phone" placeholder="Enter Mobile number">
+            <button onclick="sendLink()">Send Link</button>
+        </div>
+
+        <div class="bottom-section">
+            <div class="stores">
+               <a href="https://play.google.com/store/apps/details?id=YOUR_APP_ID" target="_blank">
+    <img 
+        src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+        alt="Google Play"></a>
+
+                <a href="https://apps.apple.com/app/idYOUR_APP_ID" target="_blank">
+                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store">
+                </a>
+            </div>
+
+            <div class="qr">
+                <img src="qr.png" alt="QR Code">
+                <p>Scan to download</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- RIGHT (BIG MOBILE IMAGE) -->
+    <div class="right">
+        <img src="images/app.jpg" alt="App Preview">
+    </div>
+
+</div>
+
 <script src="statics/scripts/javascript.js"></script>
 
 </body>
 </html>
+
+
+
+
+

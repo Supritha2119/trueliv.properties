@@ -294,7 +294,11 @@ a {
 .dropdown-box.show {
     display: block;
 }
-
+.main{
+    width: 90%;
+    max-width: 1500px;
+    margin: 40px auto;
+}
 
 /* Areas */
 
@@ -632,6 +636,7 @@ hr {
     margin-right: 10px;
     font-size: 13px;
     background: #fafafa;
+    color: black;
 }
 
 /* LAYOUT */
@@ -861,11 +866,14 @@ h1 {
     background: #fff;
     border-radius: 16px;
     padding: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .cards {
     display: flex;
     gap: 20px;
+    
 }
 
 /* CARD */
@@ -880,6 +888,7 @@ h1 {
     flex-direction: column;
     justify-content: space-between;
     margin-left: 50px;
+    
 }
 
 /* HEADINGS */
@@ -1024,6 +1033,10 @@ h1 {
     background: #e9e9e9;
     padding: 20px;
     border-radius: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+
 }
 
 .section h2 {
@@ -1169,7 +1182,9 @@ h1 {
 
 .hot-section {
     width: 90%;
-    margin: 40px auto;
+    margin-left: 50px;
+    margin-right: 50px;
+
 }
 
 .hot-wrapper {
@@ -1253,4 +1268,460 @@ h1 {
 
 .view-projects:hover {
     text-decoration: underline;
+}
+
+.every{
+    width: 90%;
+    max-width: 1500px;
+    margin-left: 50px;
+    margin-right: 50px;
+    
+}
+
+.tabs {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+    }
+
+    .tab {
+        padding: 10px 15px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        cursor: pointer;
+        background: #fff;
+        transition: 0.3s;
+    }
+
+    .tab.active {
+        background: #333;
+        color: #fff;
+    }
+
+.grid {
+    display: flex;
+    width: 100%;
+}
+
+.card_s {
+    flex: 1;                 /* all cards equal width */
+    min-width: 0;           /* IMPORTANT: allows shrinking */
+    background: #fff;
+    padding: 8px 4px;
+    margin: 2px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card_s img {
+    width: 50px;
+    height: 60px;
+}
+
+.card_s p {
+    font-size: 20px;
+    margin: 0;
+    word-break: break-word;
+}
+    @media(max-width: 768px){
+        .grid{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media(max-width: 480px){
+        .grid{
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    /* LAYOUT */
+
+.re-section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+.re-row {
+    display: flex;
+    gap: 20px;
+}
+
+.re-sidebar {
+    width: 280px;
+}
+
+/* SIDEBAR */
+.re-accordion {
+    background: #fff;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    overflow: hidden;
+}
+
+.re-header {
+    padding: 14px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.re-content {
+    display: none;
+    padding: 10px 14px;
+    font-size: 14px;
+    color: #555;
+}
+
+.re-accordion.active .re-content {
+    display: block;
+}
+
+.re-arrow {
+    transition: 0.3s;
+}
+
+.re-accordion.active .re-arrow {
+    transform: rotate(90deg);
+}
+
+/* TABS */
+.re-tabs {
+    margin-bottom: 10px;
+}
+
+.re-tabs button {
+    padding: 6px 12px;
+    margin-right: 8px;
+    background: #ddd;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.re-tabs button:hover {
+    background: #bbb;
+}
+
+.re-tabs .active {
+    background: black;
+    color: #fff;
+}
+
+/* SLIDER CARDS */
+.re-cards {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 5px;
+}
+
+/* Hide scrollbar */
+.re-cards::-webkit-scrollbar {
+    display: none;
+}
+
+.re-box {
+    min-width: 230px;
+    height: 280px;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    flex-shrink: 0;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.re-box:hover {
+    transform: scale(1.05);
+}
+
+/* Overlay */
+.re-box::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+/* TEXT */
+.re-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    z-index: 1;
+    font-weight: 600;
+}
+
+/* CLICKABLE LINK */
+.re-box-link {
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* RENT GRID */
+.re-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+.re-row {
+    flex-direction: column;
+}
+
+.re-sidebar {
+    width: 100%;
+}
+
+.re-grid {
+    grid-template-columns: 1fr;
+}
+
+.re-box {
+    min-width: 180px;
+    height: 220px;
+}
+
+}
+
+
+.tl-wrapper {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.tl-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tl-tab {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.tl-tab.active {
+    background: #333;
+    color: #fff;
+}
+
+/* Swiper */
+.tl-swiper {
+    display: none;
+    position: relative;
+}
+.tl-swiper.active {
+    display: block;
+}
+
+/* Card */
+.tl-card {
+    width: 260px;
+    background: #fafafa;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    padding: 15px;
+}
+
+/* Price */
+.tl-price-box {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    font-size: 13px;
+}
+
+/* Stats */
+.tl-stats {
+    display: flex;
+    gap: 5px;
+}
+
+.tl-stat {
+    flex: 1;
+    background: #eee;
+    padding: 8px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* Buttons */
+.tl-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.tl-btn {
+    padding: 8px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.tl-dark {
+    background: #333;
+    color: white;
+}
+
+.tl-yellow {
+    background: #ffcc00;
+}
+
+/* Arrows FIXED */
+.tl-next,
+.tl-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    font-size: 28px;
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+
+.tl-next { right: -10px; }
+.tl-prev { left: -10px; }
+
+.tl-next::after { content: '›'; }
+.tl-prev::after { content: '‹'; }
+
+/* Bottom */
+.tl-view-all {
+    text-align: center;
+    margin-top: 30px;
+}
+/* FORCE swiper layout */
+.tl-swiper .swiper-wrapper {
+    display: flex !important;
+}
+
+.tl-swiper .swiper-slide {
+    width: auto !important;
+}
+.tl-swiper {
+    overflow: hidden;   /* ❌ removes bottom scrollbar */
+}
+.app-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    background:white;
+}
+
+/* LEFT SIDE */
+.left {
+    max-width: 520px;
+}
+
+.left h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.left p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* INPUT BOX */
+.input-box {
+    margin-top: 25px;
+    display: flex;
+    background: #333;
+    padding: 8px;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.input-box input {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.input-box button {
+    margin-left: 10px;
+    padding: 14px 20px;
+    background: #FFD400;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* STORE + QR */
+.bottom-section {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.stores img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.qr {
+    margin-left: 20px;
+    text-align: center;
+}
+
+.qr img {
+    height: 100px;
+}
+
+.qr p {
+    font-size: 12px;
+    color: #666;
+}
+
+/* RIGHT SIDE IMAGE */
+.right {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.right img {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    object-fit: contain;
+    display: block;
 }
